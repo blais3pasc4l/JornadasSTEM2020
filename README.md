@@ -1,8 +1,7 @@
 # JornadasSTEM2020
 
-Este GITHUB recoge el trabajo realizado para las Jornadas STEM 2020 en el CEP de Jerez. El mismo trata sobre cómo usar las plataformas ARDUINO para realizar experimentos de Física.
+Este GITHUB recoge el trabajo realizado para las Jornadas STEM 2020 en el CEP de Jerez. El mismo trata sobre cómo usar las plataformas ARDUINO para realizar experimentos de Física con caida libre en este caso
 
-Usaremos varios sensores para la medición de distintas magnitudes, llevando a cabo varios experimentos. 
+Se utiliza el sensore óptico reflectivo infrarrojo CNY70 para los Lexperimentos. 
 
-Canal de youtube. https://www.youtube.com/watch?v=mzNWIRpJDWU&list=PLEQLoU8URDN95XLa2ecikejzn64JN0Zqs
-
+Si desean aportar ==>> [Link](https://github.com/agrgal/JornadasSTEM2020)
