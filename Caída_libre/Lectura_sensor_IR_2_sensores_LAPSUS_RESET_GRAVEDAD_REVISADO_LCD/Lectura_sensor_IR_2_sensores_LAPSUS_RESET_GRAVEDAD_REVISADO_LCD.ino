@@ -1,8 +1,5 @@
 #include <Wire.h> 
-#include <LiquidCrystal_I2C.h>
 
-//Crear el objeto lcd  dirección  0x27 y 16 columnas x 2 filas
-LiquidCrystal_I2C lcd(0x27,16,2);  //
 
 long tiempo = 0; // variable general de tiempo
 int i=0; // contador general
@@ -30,17 +27,7 @@ void setup() {
   corte[0]=corte[0]/100;
   corte[1]=corte[1]/100;
 
-  // Pantalla LCD
-  // Inicializar el LCD
-  lcd.init();
-  //Encender la luz de fondo.
-  lcd.backlight();
-  // Escribimos el Mensaje en el LCD.
-  lcd.setCursor(0, 0); // Fila 0
-  lcd.print("V.ini. A0:" + (String) corte[0]);
-  lcd.setCursor(0, 1); // Fila 1
-  lcd.print("V.ini. A1:" + (String) corte[1]);
-  // initialize serial communication at 9600 bits per second:
+
   
   Serial.begin(9600);
   Serial.println("Preparado para lanzar el móvil");
@@ -48,10 +35,7 @@ void setup() {
   Serial.println("Valor inicial sensor A0: " + (String) corte[0]);
   Serial.println("Valor inicial sensor A1: " + (String) corte[1]);
 
-  delay(3000); // Espera 3 segundos
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("Esperando tirada...");
+
 }
 
 void(* resetFunc) (void) = 0; //declare reset function at address 0
@@ -100,26 +84,9 @@ void loop() {
     Serial.println("RESULTADO: " + (String) gravedad +" m/s2.");
     Serial.println("Error respecto valor teórico: "+ (String) error + "%");
     
-    // En pantalla
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("t= "+ (String) deltat+"s ");
-    lcd.setCursor(0,1);
-    lcd.print("g = "+ (String) gravedad + " m/s2");
 
-    i = 0;
-    while (1==1) {
-      i = (i+1)*(i<32);
-      if ((i%2)==0) {
-        lcd.setCursor(0,0);
-        lcd.print("error= " + (String) error +"%     ");
-      } else {
-        lcd.setCursor(0,0);
-        lcd.print("t= "+ (String) deltat+" s       ");
-      }
-      delay(1500);      
-      resetear();
-    }
+
+   
     
   }
 
