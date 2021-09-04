@@ -4,4 +4,4 @@ Este GITHUB recoge el trabajo realizado para las Jornadas STEM 2020 en el CEP de
 
 Se utiliza el sensore óptico reflectivo infrarrojo CNY70 para los Lexperimentos. 
 
-Si desean aportar ==>> [Link](https://github.com/agrgal/JornadasSTEM2020)
+Si desean aportar --> [Link](https://github.com/agrgal/JornadasSTEM2020)
